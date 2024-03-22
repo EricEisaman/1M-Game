@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dftxt4ns1x6yw"]
+[gd_scene load_steps=5 format=3 uid="uid://dftxt4ns1x6yw"]
+
+[ext_resource type="PackedScene" uid="uid://btqfhfxmpaj2o" path="res://platform.tscn" id="1_cistk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d6gkt"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -20,3 +22,9 @@ environment = SubResource("Environment_1m6ff")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.978329, 0.207058, 0, -0.207058, 0.978329, 0, 2.01887, 2.94099)
+
+[node name="Platform" parent="." instance=ExtResource("1_cistk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.671113, 0.741355, 0, -0.741355, 0.671113, 0, 7.53119, 7.17126)

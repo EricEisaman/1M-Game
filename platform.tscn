@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://btqfhfxmpaj2o"]
+
+[ext_resource type="ArrayMesh" uid="uid://5xt24ulktcok" path="res://models/testplatform.res" id="1_8wnwr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wdjec"]
+size = Vector3(20, 2, 20)
+
+[node name="Platform" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_8wnwr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_wdjec")
